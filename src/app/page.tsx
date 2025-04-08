@@ -41,7 +41,7 @@ export default function Home() {
 
       {/* Spacer */}
       <div className="mt-16 text-gray-500 text-sm text-center">
-        © {new Date().getFullYear()} Beast11. All rights reserved.
+        © {new Date().getFullYear()} Beast11. All rights reserved..
       </div>
     </main>
   );
