@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-gray-900 text-white flex flex-col items-center justify-center px-6">
