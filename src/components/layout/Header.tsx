@@ -33,7 +33,7 @@ const Header: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Beast11 - Build Your Dream Cricket Team</title>
+        <title>Beast11 - Build Your Dream Cricket Team using beast11</title>
         <meta
           name="description"
           content="Create your fantasy cricket team, compete with friends, and win prizes based on real cricket matches."
