@@ -4,6 +4,7 @@ const nextConfig = {
     turbo: false,
   },
   images: {
+    domains: ["encrypted-tbn0.gstatic.com"],
     remotePatterns: [
       {
         protocol: "https",
