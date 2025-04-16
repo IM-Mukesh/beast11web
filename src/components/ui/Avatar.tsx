@@ -1,5 +1,10 @@
 import React from "react";
-import { cn } from "@/utils/cn";
+import Image from "next/image";
+
+// Include the cn utility directly instead of importing it
+function cn(...classes: (string | undefined | null | false | 0)[]) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   src?: string;
@@ -22,6 +27,13 @@ const sizeClasses = {
   md: "h-10 w-10 text-sm",
   lg: "h-14 w-14 text-base",
   xl: "h-20 w-20 text-lg",
+};
+
+const sizePx = {
+  sm: 32,
+  md: 40,
+  lg: 56,
+  xl: 80,
 };
 
 const statusSizeClasses = {
@@ -69,11 +81,16 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
           )}
         >
           {hasImage ? (
-            <img
-              src={src}
-              alt={alt}
-              className="aspect-square h-full w-full object-cover"
-            />
+            <div className="relative h-full w-full">
+              <Image
+                src={src}
+                alt={alt}
+                fill
+                sizes={`${sizePx[size]}px`}
+                className="object-cover"
+                priority
+              />
+            </div>
           ) : (
             <div className="flex h-full w-full items-center justify-center bg-primary-100 text-primary">
               {initials}

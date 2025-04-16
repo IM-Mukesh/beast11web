@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Trophy, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -9,7 +9,6 @@ import type { NextPage } from "next";
 import { Button } from "../ui/Button";
 import Head from "next/head";
 import Image from "next/image";
-
 // SEO metadata
 const SEO = {
   title: "Beast11 - Build Your Dream Cricket Team",
@@ -74,8 +73,14 @@ const Header: NextPage = () => {
         <div className="container mx-auto px-4 md:px-6 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <Trophy size={20} className="text-foreground" />
+              <div className="w-10 h-10 rounded-full flex items-center justify-center">
+                <Image
+                  src="/images/logo.png"
+                  alt="Logo"
+                  width={24}
+                  height={24}
+                  className="object-contain"
+                />
               </div>
 
               <span className="text-xl font-bold bg-gradient-to-r from-primary-400 to-secondary-500 bg-clip-text text-transparent">

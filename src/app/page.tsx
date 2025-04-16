@@ -379,8 +379,6 @@ const HomePage = () => {
                     <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                     <p className="text-gray-400">{item.description}</p>
                   </div>
-
-                  <div className="hidden md:block absolute top-12 left-1/2 w-6 h-6 rounded-full bg-black border-4 border-purple-500 transform -translate-x-1/2 z-20"></div>
                 </motion.div>
               ))}
             </div>

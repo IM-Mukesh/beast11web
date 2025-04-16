@@ -1,5 +1,10 @@
 import React from "react";
-import { cn } from "@/utils/cn";
+
+// Include the cn utility directly
+function cn(...classes: (string | undefined | null | false | 0)[]) {
+  return classes.filter(Boolean).join(" ");
+}
+
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -14,7 +19,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     { className, type, label, leftIcon, rightIcon, error, hint, id, ...props },
     ref
   ) => {
-    const inputId = id || React.useId();
+    // Always call useId unconditionally at the top level
+    const generatedId = React.useId();
+    // Use the provided id or the generated one
+    const inputId = id || generatedId;
     const errorId = `${inputId}-error`;
     const hintId = `${inputId}-hint`;
 
