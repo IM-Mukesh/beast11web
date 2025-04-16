@@ -3,9 +3,9 @@
 
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
-import { Trophy, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { gsap } from "gsap";
-
+import Image from "next/image";
 const Footer = () => {
   const footerRef = useRef<HTMLDivElement>(null);
   const socialIconsRef = useRef<HTMLDivElement>(null);
@@ -65,8 +65,14 @@ const Footer = () => {
           {/* Brand section */}
           <div className="footer-animate">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center transform hover:rotate-12 transition-transform duration-300">
-                <Trophy size={18} className="text-white" />
+              <div className="w-10 h-10 rounded-full  flex items-center justify-center transform hover:rotate-12 transition-transform duration-300">
+                <Image
+                  src="/images/logo.png"
+                  alt="Logo"
+                  width={24}
+                  height={24}
+                  className="object-contain"
+                />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Beast11
