@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronRight, ArrowRight } from "lucide-react";
+import Dropdown from "@/components/FAQs/Dropdown";
 
 const HomePage = () => {
   const { scrollYProgress } = useScroll();
@@ -466,6 +467,13 @@ const HomePage = () => {
             ))}
           </div>
         </div>
+      </section>
+      <section className="flex flex-col items-center justify-center px-4">
+        <span className="text-2xl md:text-3xl font-medium text-blue-500 text-center mb-6">
+          FAQs
+        </span>
+
+        <Dropdown />
       </section>
     </div>
   );
